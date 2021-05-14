@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/style.css">
+    <style>
+        /* .w2l-sbox {
+            --sb-border-color: green;
+            --sb-item-border-color: #199bf1;
+            --sb-item-background-color: #fafafa;
+            --sb-input-height-small: 24px;
+            --sb-input-height-medium: 36px;
+            --sb-input-height-large: 48px;
+            --sb-font-size-small: 10px;
+            --sb-font-size-medium: 14px;
+            --sb-font-size-large: 18px;
+            --sb-text-color: #2f2f2f;
+            --sb-placeholder-color: #2f2f2f;
+            --sb-cell-color: #ffffff;
+            --sb-hover-color: #c9c9c9;
+            --sb-selected-item-panel-border: #999999;
+            --sb-selected-item-border: #cfcdcd;
+            --sb-selected-cell-background: #e5e3e3;
+            --sb-button-background: #cecdcd;
+            --sb-button-disabled-color: #f4f3f3;
+            --sb-error-color: #fb0000;
+            --scrollbar-border-color: #d8d4d4;
+            --scrollbar-track-border-color: #c4c4c4;
+            --scrollbar-thumb-background-color: #f3f0f0;
+            --scrollbar-track-background-color: #e6e5e5;
+        } */
+    </style>
+    <link rel="stylesheet" type="text/css" href="../sbox/assets/sbox.css">
+</head>
+
+<body>
+    <div id="header">
+
+        <h1>SBOX Example
+            <h1p>
+    </div>
+    <div class="container" style="display: flex">
+
+        <div id="sbox"></div>
+        <div id="colorSbox"></div>
+        <div id="flagSbox"></div>
+
+        <div id="ajaxSbox"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Option</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>ajax</code></td>
+                    <td>object</td>
+                    <td><code>null</code></td>
+                    <td>Provides support for <a href="/data-sources/ajax">ajax data sources</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>allowClear</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td>Provides support for <a href="/selections#clearable-selections">clearable selections</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>amdLanguageBase</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>string</td>
+                    <td><code>./i18n/</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>See <a href="/builds-and-modules#using-select2-with-amd-or-commonjs-loaders">Using Select2 with AMD or CommonJS loaders</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>closeOnSelect</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>true</code></td>
+                    <td>Controls whether the dropdown is <a href="/dropdown#forcing-the-dropdown-to-remain-open-after-selection">closed after a selection is made</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>data</code></td>
+                    <td>array of objects</td>
+                    <td><code>null</code></td>
+                    <td>Allows rendering dropdown options from an <a href="/data-sources/arrays">array</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>dataAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td></td>
+                    <td><code>SelectAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Used to override the built-in <a href="/advanced/default-adapters/data">DataAdapter</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>debug</code></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td>Enable debugging messages in the browser console.</td>
+                </tr>
+                <tr>
+                    <td><code>dir</code></td>
+                    <td>string</td>
+                    <td><code>ltr</code></td>
+                    <td>Sets the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir"><code>dir</code> attribute</a> on the selection and dropdown containers to indicate the direction of the text.</td>
+                </tr>
+                <tr>
+                    <td><code>disabled</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td>When set to <code>true</code>, the select control will be disabled.</td>
+                </tr>
+                <tr>
+                    <td><code>dropdownAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td></td>
+                    <td><code>DropdownAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Used to override the built-in <a href="/advanced/default-adapters/dropdown">DropdownAdapter</a></td>
+                </tr>
+                <tr>
+                    <td><code>dropdownAutoWidth</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>dropdownCssClass</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>string</td>
+                    <td><code>''</code></td>
+                    <td>Adds additional CSS classes to the dropdown container. The helper <code>:all:</code> can be used to add all CSS classes present on the original <code>&lt;select&gt;</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>                        element.</td>
+                </tr>
+                <tr>
+                    <td><code>dropdownParent</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>jQuery selector or DOM node</td>
+                    <td><code>$(document.body)</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Allows you to <a href="/dropdown#dropdown-placement">customize placement</a> of the dropdown.</td>
+                </tr>
+                <tr>
+                    <td><code>escapeMarkup</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>callback</td>
+                    <td><code>Utils.escapeMarkup</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Handles <a href="/dropdown#built-in-escaping">automatic escaping of content rendered by custom templates</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>language</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>string or object</td>
+                    <td><code>EnglishTranslation</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Specify the <a href="/i18n#message-translations">language used for Select2 messages</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>matcher</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>A callback taking search <code>params</code><span class="copy-to-clipboard" title="Copy to clipboard"></span> and the <code>data</code> object.</td>
+                    <td></td>
+                    <td>Handles custom <a href="/searching#customizing-how-results-are-matched">search matching</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>maximumInputLength</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>integer</td>
+                    <td><code>0</code></td>
+                    <td><a href="/searching#maximum-search-term-length">Maximum number of characters</a> that may be provided for a search term.</td>
+                </tr>
+                <tr>
+                    <td><code>maximumSelectionLength</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>integer</td>
+                    <td><code>0</code></td>
+                    <td>The maximum number of items that may be selected in a multi-select control. If the value of this option is less than 1, the number of selected items will not be limited.</td>
+                </tr>
+                <tr>
+                    <td><code>minimumInputLength</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>integer</td>
+                    <td><code>0</code></td>
+                    <td><a href="/searching#minimum-search-term-length">Minimum number of characters required to start a search.</a></td>
+                </tr>
+                <tr>
+                    <td><code>minimumResultsForSearch</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>integer</td>
+                    <td><code>0</code></td>
+                    <td>The minimum number of results required to <a href="/searching#limiting-display-of-the-search-box-to-large-result-sets">display the search box</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>multiple</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td>This option enables multi-select (pillbox) mode. Select2 will automatically map the value of the <code>multiple</code><span class="copy-to-clipboard" title="Copy to clipboard"></span> HTML attribute to this option during initialization.</td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>string or object</td>
+                    <td><code>null</code></td>
+                    <td>Specifies the <a href="/placeholders">placeholder</a> for the control.</td>
+                </tr>
+                <tr>
+                    <td><code>resultsAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td></td>
+                    <td><code>ResultsAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Used to override the built-in <a href="/advanced/default-adapters/results">ResultsAdapter</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>selectionAdapter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td></td>
+                    <td><code>SingleSelection</code><span class="copy-to-clipboard" title="Copy to clipboard"></span> or <code>MultipleSelection</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>, depending on the value of <code>multiple</code>
+                        <span class="copy-to-clipboard" title="Copy to clipboard"></span>.</td>
+                    <td>Used to override the built-in <a href="/advanced/default-adapters/selection">SelectionAdapter</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>selectionCssClass</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>string</td>
+                    <td><code>''</code></td>
+                    <td>Adds additional CSS classes to the selection container. The helper <code>:all:</code> can be used to add all CSS classes present on the original <code>&lt;select&gt;</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>                        element.</td>
+                </tr>
+                <tr>
+                    <td><code>selectOnClose</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td>Implements <a href="/dropdown#automatic-selection">automatic selection</a> when the dropdown is closed.</td>
+                </tr>
+                <tr>
+                    <td><code>sorter</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>callback</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>tags</code></td>
+                    <td>boolean / array of objects</td>
+                    <td><code>false</code></td>
+                    <td>Used to enable <a href="/tagging">free text responses</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>templateResult</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>callback</td>
+                    <td></td>
+                    <td>Customizes the way that <a href="/dropdown#templating">search results are rendered</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>templateSelection</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>callback</td>
+                    <td></td>
+                    <td>Customizes the way that <a href="/selections#templating">selections are rendered</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>theme</code></td>
+                    <td>string</td>
+                    <td><code>default</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Allows you to set the <a href="/appearance#themes">theme</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>tokenizer</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>callback</td>
+                    <td></td>
+                    <td>A callback that handles <a href="/tagging#automatic-tokenization-into-tags">automatic tokenization of free-text entry</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>tokenSeparators</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>array</td>
+                    <td><code>null</code></td>
+                    <td>The list of characters that should be used as token separators.</td>
+                </tr>
+                <tr>
+                    <td><code>width</code></td>
+                    <td>string</td>
+                    <td><code>resolve</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>Supports <a href="/appearance#container-width">customization of the container width</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>scrollAfterSelect</code><span class="copy-to-clipboard" title="Copy to clipboard"></span></td>
+                    <td>boolean</td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, resolves issue for multiselects using <code>closeOnSelect: false</code><span class="copy-to-clipboard" title="Copy to clipboard"></span> that caused the list of results to scroll to the first selection after each
+                        select/unselect (see https://github.com/select2/select2/pull/5150). This behaviour was intentional to deal with infinite scroll UI issues (if you need this behavior, set <code>false</code>) but it created an issue with multiselect
+                        dropdown boxes of fixed length. This pull request adds a configurable option to toggle between these two desirable behaviours.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <script src="../jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="../sbox/umd/bundle.js" type="text/javascript"></script>
+    </div>
+    <script>
+        $(function() {
+            $("#sbox").Sbox({
+                multiSelect: false,
+                width: "100px",
+                size: 'large',
+                pagination: true,
+                typeHeader: true,
+                itemPerPage: 5,
+                emptyText: 'please select',
+                name: 'input', // name of field
+                value: '', // default value
+                noTitleValue: '',
+                dataStore: {
+                    json: [{
+                        id: "A",
+                        name: "Archive"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }, {
+                        id: "D",
+                        name: "Delete"
+                    }]
+                },
+                listners: {
+                    onSelect: function(el, data) {
+                        console.log(el, data)
+                    }
+                }
+            });
+
+
+            $("#colorSbox").Sbox({
+                width: "120px",
+                typeHeader: false,
+                dataStore: {
+                    json: [{
+                        id: "red",
+                        name: "Red",
+                        color: "red",
+                    }, {
+                        id: "green",
+                        name: "Green",
+                        color: "green",
+                    }, {
+                        id: "yellow",
+                        name: "Yellow",
+                        color: "yellow",
+                    }]
+                },
+                listners: {
+                    onSelect: function(el, data) {
+                        console.log(el, data)
+                    }
+                }
+            });
+
+            $("#flagSbox").Sbox({
+                width: "120px",
+                typeHeader: false,
+                dataStore: {
+                    json: [{
+                        id: "usa",
+                        name: "United states",
+                        image: "https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png",
+                    }, {
+                        id: "uk",
+                        name: "United kingdom",
+                        image: "https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png",
+                    }, {
+                        id: "india",
+                        name: "India",
+                        image: "https://www.countryflags.com/wp-content/uploads/india-flag-png-large.png",
+                    }]
+                },
+                listners: {
+                    onSelect: function(el, data) {
+                        console.log(el, data)
+                    }
+                }
+            });
+
+            $("#ajaxSbox").Sbox({
+                multiSelect: true,
+                size: 'small',
+                pagination: true,
+                typeHeader: true,
+                itemPerPage: 20,
+                width: "100px",
+                emptyText: 'please select country',
+                name: 'input', // name of field
+                value: '', // default value
+                noTitleValue: '',
+                dataStore: {
+                    ajax: {
+                        url: '/api/country',
+                        data: {},
+                        dataType: 'json',
+                        type: 'get',
+                        cache: false,
+                        success: (res) => {
+                            console.log(res)
+                        }
+                    },
+                },
+                listners: {
+                    onSelect: function(el, data) {
+                        console.log(el, data)
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

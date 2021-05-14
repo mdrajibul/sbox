@@ -1,0 +1,65 @@
+{
+  "defaultSeverity": "warning",
+  "plugins": ["react"],
+  "extends": ["tslint-plugin-prettier", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules", "**/*.d.ts"]
+  },
+  "rules": {
+    "prettier": true,
+    "no-console": [true, "log", "error", "debug", "warn"],
+    "semicolon": [true, "always", "ignore-interfaces", "ignore-bound-class-methods"],
+    "no-extra-semi": false,
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
+    "indent": [true, "spaces", 4],
+    "no-consecutive-blank-lines": true,
+    "prefer-const": true,
+    "no-trailing-whitespace": true,
+    "no-empty-interface": true,
+    "no-empty": false,
+    "typedef": [true],
+    "interface-name": false,
+    "no-implicit-dependencies": false,
+    "member-ordering": [
+      false,
+      {
+        "order": [
+          "public-static-field",
+          "public-instance-field",
+          "private-static-field",
+          "private-instance-field",
+          "public-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ],
+        "maxLength": 25,
+        "alphabetize": true
+      }
+    ],
+    "variable-name": {
+      "options": ["ban-keywords", "check-format", "allow-pascal-case"]
+    },
+    "member-access": [true, "no-public"],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
+    "object-literal-sort-keys": [
+      true,
+      "ignore-blank-lines",
+      "ignore-case",
+      "locale-compare",
+      "match-declaration-order",
+      "shorthand-first"
+    ],
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "no-var-keyword": true,
+    "one-variable-per-declaration": false,
+    "no-import-side-effect": [true, { "ignore-module": "(\\.html|\\.css)$" }]
+  }
+}

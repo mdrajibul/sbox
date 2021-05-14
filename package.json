@@ -1,0 +1,61 @@
+{
+    "name": "@mdrajibul/sbox",
+    "version": "1.0.0",
+    "description": "A jquery base autocomplete",
+    "main": "dist/es2015",
+    "types": "dist/es2015/index.d.ts",
+    "scripts": {
+        "build:tsc": "tsc --esModuleInterop --experimentalDecorators --module esnext --target es2015",
+        "build": "del-cli dist && npm run build:scss && npm run build:es2015 && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min && del-cli dist/assets/sbox.scss",
+        "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
+        "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm",
+        "build:cjs": "tsc",
+        "build:scss": "rollup -c rollup-scss.config.js",
+        "build:umd": "rollup -c",
+        "build:umd:min": "cd dist/umd && uglifyjs --compress --mangle --source-map --comments -o sbox.min.js -- sbox.js",
+        "copy:asset": "cpy ./assets/**/* ./dist --parents  --cwd=.",
+        "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,css}",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --collectCoverage --watchAll=false",
+        "lint": "tslint --project tsconfig.json",
+        "lint:fix": "tslint --project tsconfig.json --fix"
+    },
+    "author": "MD RAJIB UL ISLAM<mdrajibul@gmail.com>",
+    "license": "ISC",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.2",
+        "@babel/plugin-transform-runtime": "^7.10.1",
+        "@rollup/plugin-node-resolve": "^11.2.1",
+        "@types/jest": "^26.0.22",
+        "@types/jquery": "^3.5.5",
+        "@types/node": "^12.11.1",
+        "babel-plugin-transform-custom-element-classes": "^0.1.0",
+        "babel-plugin-transform-es2015-classes": "^6.24.1",
+        "cpy-cli": "^3.1.1",
+        "del-cli": "^3.0.0",
+        "jest": "26.6.0",
+        "jsdom": "^16.5.2",
+        "prettier": "2.0.5",
+        "rollup": "^2.45.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-css-bundle": "^1.0.4",
+        "rollup-plugin-dynamic-import-variables": "^1.1.0",
+        "rollup-plugin-scss": "^2.6.1",
+        "rollup-plugin-serve": "^1.0.1",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "rollup-plugin-uglify": "^6.0.4",
+        "ts-jest": "^26.5.4",
+        "tslint": "^5.14.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-plugin-prettier": "^2.0.1",
+        "typescript": "~3.8.3"
+    }
+}
