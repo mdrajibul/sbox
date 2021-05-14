@@ -12,13 +12,14 @@ A [jQuery](https://github.com/mdrajibul/sbox) base plugin for dropdown and autoc
 ```bash
 # using npm
 npm install --save @mdrajibul/sbox
-
+```
 
 ## Usage
 
 In your Js/TS file as jQuery:
 
 ```js
+
 import $ from "jquery";
 
 $(() => {
@@ -42,7 +43,7 @@ $(() => {
 			],
 		},
 		listners: {
-			onSelect: function (el, data) {
+			onSelect: (el, data) => {
 				console.log(el, data);
 			},
 		}
@@ -61,7 +62,7 @@ new Sbox({
 		arrayList: [ 'United states', 'United kingdom','India']
 	},
 	listners: {
-		onSelect: function (el, data) {
+		onSelect: (el, data) => {
 			console.log(el, data);
 		},
 	}
