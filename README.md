@@ -4,7 +4,7 @@ A [jQuery](https://github.com/mdrajibul/sbox) base plugin for dropdown and autoc
 
 ## Documentation
 
-<a href="https://mdrajibul.blogspot.com/p/sbox.html">https://mdrajibul.blogspot.com/p/sbox.html</a>
+<a href="http://www.rajibul.me/p/sbox.html">http://www.rajibul.me/p/sbox.html</a>
 
 ## Installation
 
@@ -68,4 +68,4 @@ new Sbox({
 	}
 });
 ```
-More information please visit <a href="https://mdrajibul.blogspot.com/p/sbox.html#examples">Sbox examples</a>
+More information please visit <a href="http://www.rajibul.me/p/sbox.html#examples">Sbox examples</a>
